@@ -1,5 +1,5 @@
 {
-  "name": "generator-cl-ng-component",
+  "name": "generator-cl",
   "version": "0.0.1",
   "description": "generates a typescript angular 1 componet with a view template and sass styles file",
   "main": "generators/app/index.js",
