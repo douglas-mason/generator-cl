@@ -1,6 +1,6 @@
 # generator-cl
 
-## Create a angular 1 typescript component
+## `cl:comp` (angularjs component)
 
 Lets say we want to make a component called `task-list`, and
 attach it to the `clPlatform.app` module.
