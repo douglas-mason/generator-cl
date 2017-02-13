@@ -1,14 +1,23 @@
 {
-  "name": "yeoman-generator-cl-ng-component",
+  "name": "generator-cl-ng-component",
   "version": "0.0.1",
   "description": "generates a typescript angular 1 componet with a view template and sass styles file",
-  "main": "dist/index.js",
+  "main": "generators/app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "tsc",
+    "watch": "tsc -w"
   },
+  "files": [
+    "generators"
+  ],
   "author": "bsouthga@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "yeoman-generator": "^1.1.0"
+    "yeoman-generator": "1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "6",
+    "@types/yeoman-generator": "1.0.0",
+    "typescript": "2.1.6"
   }
 }
