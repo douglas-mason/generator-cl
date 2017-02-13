@@ -1,5 +1,5 @@
-import * from 'angular';
-import BaseController from '<%= baseControllerPath %>/base-controller';
+import * as angular from 'angular';
+import BaseController from '<%= baseControllerPath %>';
 
 export class <%= controllerName %> extends BaseController {
 
@@ -11,7 +11,7 @@ export class <%= controllerName %> extends BaseController {
 
 angular.module('<%= moduleName %>')
   .component('<%= componentNameCamelCase %>', {
-    templateUrl: 'views/<%= templateUrl %>',
+    templateUrl: '<%= templateUrl %>',
     controller: <%= controllerName %>,
     bindings: {}
-  })
+  });

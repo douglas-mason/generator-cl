@@ -5,7 +5,7 @@
   "main": "generators/app/index.js",
   "scripts": {
     "tsc": "tsc && npm run copy-templates",
-    "watch": "tsc -w",
+    "watch": "npm run copy-templates && tsc -w",
     "copy-templates": "cd src && copyfiles ./**/*.template ../generators"
   },
   "files": [
@@ -15,10 +15,12 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "4.17.4",
+    "mkdirp": "^0.5.1",
     "yeoman-generator": "1.1.0"
   },
   "devDependencies": {
     "@types/lodash": "4.14.52",
+    "@types/mkdirp": "^0.3.29",
     "@types/node": "6",
     "@types/yeoman-generator": "1.0.0",
     "copyfiles": "1.2.0",
