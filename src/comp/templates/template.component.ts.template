@@ -1,0 +1,17 @@
+import * from 'angular';
+import BaseController from '<%= baseControllerPath %>/base-controller';
+
+export class <%= controllerName %> extends BaseController {
+
+  static $inject = [];
+
+  _: {};
+
+}
+
+angular.module('<%= moduleName %>')
+  .component('<%= componentNameCamelCase %>', {
+    templateUrl: 'views/<%= templateUrl %>',
+    controller: <%= controllerName %>,
+    bindings: {}
+  })

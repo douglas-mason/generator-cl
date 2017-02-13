@@ -4,8 +4,9 @@
   "description": "generates a typescript angular 1 componet with a view template and sass styles file",
   "main": "generators/app/index.js",
   "scripts": {
-    "tsc": "tsc",
-    "watch": "tsc -w"
+    "tsc": "tsc && npm run copy-templates",
+    "watch": "tsc -w",
+    "copy-templates": "cd src && copyfiles ./**/*.template ../generators"
   },
   "files": [
     "generators"
@@ -13,11 +14,14 @@
   "author": "bsouthga@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "lodash": "4.17.4",
     "yeoman-generator": "1.1.0"
   },
   "devDependencies": {
+    "@types/lodash": "4.14.52",
     "@types/node": "6",
     "@types/yeoman-generator": "1.0.0",
+    "copyfiles": "1.2.0",
     "typescript": "2.1.6"
   }
 }
