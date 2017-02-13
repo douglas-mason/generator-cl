@@ -5,6 +5,7 @@
   "main": "generators/app/index.js",
   "scripts": {
     "tsc": "tsc && npm run copy-templates",
+    "prepublish": "npm run tsc",
     "watch": "npm run copy-templates && tsc -w",
     "copy-templates": "cd src && copyfiles ./**/*.template ../generators"
   },
