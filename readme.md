@@ -1,4 +1,4 @@
-# generator-cl
+# generator-cl [![npm version](https://badge.fury.io/js/generator-cl.svg)](https://badge.fury.io/js/generator-cl)
 
 To install:
 
