@@ -6,7 +6,22 @@ To install:
 yarn add generator-cl --dev
 ```
 
-## `cl:comp` (angularjs component)
+## Contributing a new generator
+
+To add a new generator (like `cl:controller`), just add a folder with the same name
+to the `src` directory (so, `src/controller`), and have an `index.ts` file export
+a generator class. See `src/comp/index.ts` for an example.
+
+
+## Generators
+
+The following can be used via...
+
+```shell
+yo cl:<component> <...params>
+```
+
+### `comp` (angularjs component)
 
 Lets say we want to make a component called `task-list`, and
 attach it to the `clPlatform.app` module.
