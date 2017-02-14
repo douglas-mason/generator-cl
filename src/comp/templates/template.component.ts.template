@@ -6,6 +6,9 @@ export class <%= controllerName %> extends BaseController {
   static $inject = [];
 
   _: {};
+  
+  $onInit() {
+  }
 
 }
 
