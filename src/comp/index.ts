@@ -59,7 +59,7 @@ class ComponentGenerator extends GeneratorClass {
       'view.html'
     ].forEach(filetype => {
       this.fs.copyTpl(
-        this.templatePath(`template.${filetype}.template`),
+        this.templatePath(`${filetype}.template`),
         path.join(folderPath, `${name}.${filetype}`),
         data
       );
