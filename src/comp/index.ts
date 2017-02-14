@@ -5,7 +5,7 @@ import * as path from 'path';
 
 
 
-class ComponentGenerator extends GeneratorClass {
+export = class ComponentGenerator extends GeneratorClass {
 
   options: {
     name: string;
@@ -68,5 +68,3 @@ class ComponentGenerator extends GeneratorClass {
   }
 
 }
-
-export = ComponentGenerator;
