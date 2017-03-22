@@ -40,7 +40,7 @@ export class <%= controllerName %> extends BaseController implements angular.ICo
 
 angular.module('<%= moduleName %>')
   .component('<%= componentNameCamelCase %>', {
-    templateUrl: '<%= templateUrl %>',
+    template: require('<%= templateUrl %>'),
     controller: <%= controllerName %>,
     bindings: {}
   });

@@ -31,7 +31,7 @@ export = class ComponentGenerator extends GeneratorClass {
 
     mkdirp.sync(folderPath);
 
-    const templateUrl = `views/${appClientBase}/${name}.view.html`;
+    const templateUrl = `./${name}.view.html`;
     const pascalCase = (str: string) => {
       const camel = _.camelCase(str);
       return camel.charAt(0).toUpperCase() + camel.slice(1);
