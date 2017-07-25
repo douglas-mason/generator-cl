@@ -1,0 +1,6 @@
+/**
+ * state type for `<%= camelName %>` property
+ */
+export type <%= pascalName %>State = Readonly<{
+
+}>;

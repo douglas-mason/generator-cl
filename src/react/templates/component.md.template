@@ -1,0 +1,5 @@
+<%= pascalName %> example usage:
+
+```example
+<<%= pascalName %> />
+```

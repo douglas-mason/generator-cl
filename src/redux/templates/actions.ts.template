@@ -1,0 +1,22 @@
+/**
+ * enumeration of all action types for <%= camelName %>
+ */
+export enum <%= pascalName %>ActionTypes {
+  <%= allCapsName %>_EXAMPLE_ACTION = '<%= allCapsName %>_EXAMPLE_ACTION',
+}
+
+/**
+ * union type of all <%= camelName %> actions
+ */
+export type <%= pascalName %>Action
+  = <%= pascalName %>ExampleAction;
+
+/**
+ * example individual action type
+ */
+export type <%= pascalName %>ExampleAction = {
+  type: <%= pascalName %>ActionTypes.<%= allCapsName %>_EXAMPLE_ACTION;
+  payload: {
+    message: string;
+  };
+};

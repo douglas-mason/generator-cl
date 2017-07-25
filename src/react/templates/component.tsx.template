@@ -1,0 +1,54 @@
+import * as React from 'react';
+import { connect, Dispatch } from 'react-redux';
+import { style } from 'typestyle';
+
+/**
+ * import app state topology
+ */
+import { State } from '../../../state';
+
+/**
+ * custom styles for this component
+ */
+const <%= camelName %>Class = style({
+  // add css properties...
+});
+
+/**
+ * type definition for properties of component
+ */
+type <%= pascalName %>Props = Readonly<{
+  // properties passed to <%= pascalName %> component
+}>;
+
+
+/**
+ *
+ * base react component
+ *
+ */
+const <%= pascalName %> = (props: <%= pascalName %>Props) =>
+  <div className={<%= camelName %>Class}>
+    Hello from <%= pascalName %> component
+  </div>;
+
+
+/**
+ *
+ * redux logic
+ *
+ */
+
+const mapStateToProps = (state: State) => ({
+  // extract properties on state and return as component props
+});
+
+const mapDispatchToProps = (dispatch: Dispatch<State>) => ({
+  // create a function which dispatches an action,
+  // will be passed as a property to the component
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(<%= pascalName %>);
