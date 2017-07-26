@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { style } from 'typestyle';
+import { <%= camelName %>Class } from './<%= kebabName %>.styles';
 
 /**
  * import app state topology
@@ -8,12 +8,6 @@ import { style } from 'typestyle';
 import { State } from '../../../state';
 import { Dispatch } from '../../../actions';
 
-/**
- * custom styles for this component
- */
-const <%= camelName %>Class = style({
-  // add css properties...
-});
 
 /**
  * type definition for properties of component
