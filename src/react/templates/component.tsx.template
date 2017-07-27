@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+<% if (redux) { %>import { connect } from 'react-redux';<% } %>
 import { <%= camelName %>Class } from './<%= kebabName %>.styles';
-
+<% if (redux) { %>
 /**
  * import app state topology
  */
 import { State } from '../../../state';
 import { Dispatch } from '../../../actions';
-
+<% } %>
 
 /**
  * type definition for properties of component
@@ -22,12 +22,12 @@ type <%= pascalName %>Props = Readonly<{
  * base react component
  *
  */
-const <%= pascalName %> = (props: <%= pascalName %>Props) =>
+const <%= pascalName %>: React.StatelessComponent<<%= pascalName %>Props> = props =>
   <div className={<%= camelName %>Class}>
     Hello from <%= pascalName %> component
   </div>;
 
-
+<% if (redux) { %>
 /**
  *
  * redux logic
@@ -47,3 +47,6 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(<%= pascalName %>);
+<% } else { %>
+export default <%= pascalName %>;
+<% } %>

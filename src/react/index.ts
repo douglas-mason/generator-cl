@@ -10,11 +10,13 @@ export = class ReactGenerator extends GeneratorClass {
 
   options: {
     name: string;
+    redux?: boolean;
   };
 
   constructor(args: any, opts: any) {
     super(args, opts);
     this.argument('name', { type: String, required: true });
+    this.option('redux', { type: Boolean });
   }
 
   async writing() {
@@ -35,7 +37,8 @@ export = class ReactGenerator extends GeneratorClass {
       kebabName: _.kebabCase(name),
       pascalName: pascalCase(name),
       camelName: _.camelCase(name),
-      allCapsName: _.snakeCase(name).toUpperCase()
+      allCapsName: _.snakeCase(name).toUpperCase(),
+      redux: this.options.redux
     };
 
     /**
