@@ -11,12 +11,14 @@ export = class ReactGenerator extends GeneratorClass {
   options: {
     name: string;
     redux?: boolean;
+    styleguidist?: boolean;
   };
 
   constructor(args: any, opts: any) {
     super(args, opts);
     this.argument('name', { type: String, required: true });
     this.option('redux', { type: Boolean });
+    this.option('styleguidist', { type: Boolean });
   }
 
   async writing() {
@@ -48,6 +50,16 @@ export = class ReactGenerator extends GeneratorClass {
       const portions = templateFile.split('.');
       portions.pop(); // remove .template
       const suffix = portions.join('.');
+
+      if (!this.options.styleguidist && suffix === 'component.md') {
+        // skip component.md if --styleguidist option not used
+        return;
+      }
+
+      if (this.options.styleguidist && suffix === 'stories.tsx') {
+        // skip story if using styleguidist
+        return;
+      }
 
       this.fs.copyTpl(
         this.templatePath(templateFile),

@@ -1,0 +1,16 @@
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import <%= pascalName %> from './<%= kebabName %>.component';
+
+/**
+ * develop the component by changing the example shown
+ * here. You can also add a few examples with chained
+ * calls to `.add(...)`.
+ *
+ * for more information see https://storybook.js.org/basics/writing-stories/
+ */
+storiesOf('<%= pascalName %>', module)
+  .add('default', withInfo('Default example for <%= pascalName %> component')(() => (
+    <<%= pascalName %> />
+  )));
