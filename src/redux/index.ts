@@ -10,16 +10,20 @@ export = class ReduxGenerator extends GeneratorClass {
 
   options: {
     name: string;
+    dir?: string;
   };
 
   constructor(args: any, opts: any) {
     super(args, opts);
     this.argument('name', { type: String, required: true });
+    this.option("dir", { type: String });
   }
 
   async writing() {
     const name = this.options.name;
-    const cwd = process.cwd();
+    const cwd = this.options.dir
+      ? path.join(process.cwd(), this.options.dir)
+      : process.cwd();
     const folderPath = path.join(cwd, name);
 
     mkdirp.sync(folderPath);
