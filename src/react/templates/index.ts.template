@@ -1,0 +1,2 @@
+export { <%= camelName %>Class } from './<%= kebabName %>.styles';
+export { default as <%= pascalName %> } from './<%= kebabName %>.component';

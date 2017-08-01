@@ -63,7 +63,7 @@ export = class ReactGenerator extends GeneratorClass {
 
       this.fs.copyTpl(
         this.templatePath(templateFile),
-        path.join(folderPath, `${name}.${suffix}`),
+        path.join(folderPath, suffix === 'index.ts' ? suffix : `${name}.${suffix}`),
         data
       );
     });
