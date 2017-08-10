@@ -1,13 +1,5 @@
 import * as React from 'react';
-<% if (redux) { %>import { connect } from 'react-redux';<% } %>
 import { <%= camelName %>Class } from './<%= kebabName %>.styles';
-<% if (redux) { %>
-/**
- * import app state topology
- */
-import { State } from '../../../state';
-import { Dispatch } from '../../../actions';
-<% } %>
 
 /**
  * type definition for properties of component
@@ -27,26 +19,4 @@ const <%= pascalName %>: React.StatelessComponent<<%= pascalName %>Props> = prop
     Hello from <%= pascalName %> component
   </div>;
 
-<% if (redux) { %>
-/**
- *
- * redux logic
- *
- */
-
-const mapStateToProps = (state: State) => ({
-  // extract properties on state and return as component props
-});
-
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  // create a function which dispatches an action,
-  // will be passed as a property to the component
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(<%= pascalName %>);
-<% } else { %>
 export default <%= pascalName %>;
-<% } %>

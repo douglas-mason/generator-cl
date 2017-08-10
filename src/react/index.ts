@@ -7,7 +7,6 @@ import * as fs from "fs";
 export = class ReactGenerator extends GeneratorClass {
   options: {
     name: string;
-    redux?: boolean;
     styleguidist?: boolean;
     dir?: string;
   };
@@ -15,7 +14,6 @@ export = class ReactGenerator extends GeneratorClass {
   constructor(args: any, opts: any) {
     super(args, opts);
     this.argument("name", { type: String, required: true });
-    this.option("redux", { type: Boolean });
     this.option("styleguidist", { type: Boolean });
     this.option("dir", { type: String });
   }
@@ -39,8 +37,7 @@ export = class ReactGenerator extends GeneratorClass {
       kebabName: _.kebabCase(name),
       pascalName: pascalCase(name),
       camelName: _.camelCase(name),
-      allCapsName: _.snakeCase(name).toUpperCase(),
-      redux: this.options.redux
+      allCapsName: _.snakeCase(name).toUpperCase()
     };
 
     /**

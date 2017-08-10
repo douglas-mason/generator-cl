@@ -1,0 +1,55 @@
+import <%= pascalName %> from './<%= kebabName %>.component';
+import { connect } from 'react-redux';
+/**
+ * import app state topology
+ */
+import { State } from '../../../state';
+import { Dispatch } from '../../../actions';
+
+/**
+ *
+ * Container version of <%= pascalName %>,
+ * here we pass properties to the component from the global state...
+ *
+ *    <<%= pascalName %> {...props} />
+ *
+ */
+
+/**
+ *
+ * this function returns an object containing properties
+ * which will be passed into the component being "connected"
+ *
+ */
+const mapStateToProps = (state: State) => ({
+  // props...
+});
+
+/**
+*
+* here you can create a function which dispatches an action,
+* will be passed as a property to the component
+*
+* for example:
+*
+* // import an action creator from somewhere else
+* import { searchAction } from '...';
+*
+* const mapDispatchToProps = (dispatch: Dispatch) => {
+*   return {
+*     // assuming component being connected has an "onSearch" property
+*     onSearch(query: string) {
+*       dispatch(searchAction(query));
+*     }
+*   }
+* }
+*
+*/
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  // props...
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(<%= pascalName %>);
