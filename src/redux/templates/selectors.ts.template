@@ -1,0 +1,29 @@
+import { createSelector } from 'reselect';
+
+ // Note, import the whole state so we can use the selectors on the root state
+import { State } from '../../../state';
+
+/**
+ * create a selector for userId
+ *
+ * -> return afunction of (state -> userId)
+ *
+ *
+ * this can now be used in a `connect` call (or elsewhere)
+ * as `select<%= pascalName %>(state)`
+ */
+export const selectUserId = (state: State) => state._shared.session.user;
+
+/**
+ * can also compose selectors, which will in turn be memoized,
+ *
+ * https://github.com/reactjs/reselect#reselect
+ *
+ * this function uses selectUserId to create a new function of
+ * (state -> `awesome${userId}`)
+ */
+const addAwesomeSelector = createSelector(
+  selectUserId,
+  // the input of this function is the output of the above function
+  exampleProp => `awesome${exampleProp}`
+);

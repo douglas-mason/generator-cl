@@ -1,3 +1,4 @@
-export { <%= pascalName %>State } from './<%= kebabName %>.state';
-export { <%= pascalName %>Action } from './<%= kebabName %>.actions';
-export { <%= camelName %> } from './<%= kebabName %>.reducer';
+export * from './<%= kebabName %>.state';
+export * from './<%= kebabName %>.actions';
+export * from './<%= kebabName %>.reducer';
+export * from './<%= kebabName %>.selectors';
