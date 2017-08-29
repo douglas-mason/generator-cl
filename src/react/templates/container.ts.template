@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 /**
  * import app state topology
  */
-import { State } from '../../../state';
-import { Dispatch } from '../../../actions';
+import { State } from '@root/state';
+import { Dispatch } from '@root/actions';
 
 /**
  *

@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
  // Note, import the whole state so we can use the selectors on the root state
-import { State } from '../../../state';
+import { State } from '@root/state';
 
 /**
  * create a selector for userId
