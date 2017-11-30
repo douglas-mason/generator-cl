@@ -14,9 +14,7 @@ type <%= pascalName %>Props = Readonly<{
  * base react component
  *
  */
-const <%= pascalName %>: React.StatelessComponent<<%= pascalName %>Props> = props =>
+export const <%= pascalName %>: React.StatelessComponent<<%= pascalName %>Props> = props =>
   <div className={<%= camelName %>Class}>
     Hello from <%= pascalName %> component
   </div>;
-
-export default <%= pascalName %>;
