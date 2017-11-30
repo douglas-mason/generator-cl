@@ -1,4 +1,4 @@
-import <%= pascalName %> from './<%= kebabName %>.component';
+import { <%= pascalName %> as <%= pascalName %>Component } from './<%= kebabName %>.component';
 import { connect } from 'react-redux';
 /**
  * import app state topology
@@ -49,7 +49,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
   // props...
 });
 
-export default connect(
+export const <%= pascalName %> = connect(
   mapStateToProps,
   mapDispatchToProps
-)(<%= pascalName %>);
+)(<%= pascalName %>Component);
