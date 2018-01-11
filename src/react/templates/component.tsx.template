@@ -4,9 +4,9 @@ import { <%= camelName %>Class } from './<%= kebabName %>.styles';
 /**
  * type definition for properties of component
  */
-export type <%= pascalName %>Props = Readonly<{
+export interface <%= pascalName %>Props {
   // properties passed to <%= pascalName %> component
-}>;
+}
 
 
 /**
