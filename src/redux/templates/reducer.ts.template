@@ -1,0 +1,16 @@
+import { <%= pascalName %>State } from './<%= kebabName %>.state';
+import { <%= pascalName %>Action, <%= pascalName %>ActionTypes } from './<%= kebabName %>.actions';
+
+export function <%= camelName %>(state: <%= pascalName %>State = {}, action: <%= pascalName %>Action) {
+  switch (action.type) {
+    case <%= pascalName %>ActionTypes.<%= allCapsName %>_EXAMPLE_ACTION: {
+      // do something here on example action
+      return state;
+    }
+
+    /**
+     * default to passing state through if no recognized action
+     */
+    default: return state;
+  }
+}

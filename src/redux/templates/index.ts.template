@@ -1,0 +1,4 @@
+export * from './<%= kebabName %>.state';
+export * from './<%= kebabName %>.actions';
+export * from './<%= kebabName %>.reducer';
+export * from './<%= kebabName %>.selectors';

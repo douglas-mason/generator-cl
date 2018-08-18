@@ -1,6 +1,6 @@
 {
   "name": "generator-cl",
-  "version": "0.0.1",
+  "version": "0.0.17",
   "description": "generates a typescript angular 1 componet with a view template and sass styles file",
   "main": "generators/app/index.js",
   "scripts": {
@@ -17,14 +17,14 @@
   "dependencies": {
     "lodash": "4.17.4",
     "mkdirp": "0.5.1",
-    "yeoman-generator": "1.1.0"
+    "yeoman-generator": "1.1.1"
   },
   "devDependencies": {
-    "@types/lodash": "4.14.52",
-    "@types/mkdirp": "0.3.29",
+    "@types/lodash": "4.14.71",
+    "@types/mkdirp": "0.5.0",
     "@types/node": "6",
-    "@types/yeoman-generator": "1.0.0",
+    "@types/yeoman-generator": "1.0.2",
     "copyfiles": "1.2.0",
-    "typescript": "2.1.6"
+    "typescript": "2.4.2"
   }
 }

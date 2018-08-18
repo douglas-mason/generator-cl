@@ -1,0 +1,2 @@
+export * from './<%= kebabName %>.styles';
+export * from './<%= kebabName %>.component';

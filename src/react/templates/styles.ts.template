@@ -1,0 +1,8 @@
+import { style } from 'typestyle';
+
+/**
+ * custom styles for this component
+ */
+export const <%= camelName %>Class = style({
+  // add css properties...
+});

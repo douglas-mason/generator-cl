@@ -1,0 +1,46 @@
+import * as angular from 'angular';
+import BaseController from '<%= baseControllerPath %>';
+
+
+/**
+ * Controller for the <%= componentName %> component
+ */
+export class <%= controllerName %> extends BaseController implements angular.IComponentController {
+
+  /**
+   * Inject angular dependencies here
+   */
+  static $inject = [
+    '$rootScope'
+  ];
+
+
+  /**
+   * This is where you can declare typings
+   * for the injected dependencies.
+   */
+  _: {
+    $rootScope: angular.IRootScopeService;
+  };
+
+
+  /**
+   * This method is called when the component is constructed.
+   */
+  $onInit() {
+    const $ctrl = this;
+    const {
+      $rootScope
+    } = $ctrl._;
+
+  }
+
+}
+
+
+angular.module('<%= moduleName %>')
+  .component('<%= componentNameCamelCase %>', {
+    template: require('<%= templateUrl %>'),
+    controller: <%= controllerName %>,
+    bindings: {}
+  });

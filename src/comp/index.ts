@@ -5,7 +5,7 @@ import * as path from 'path';
 
 
 
-class ComponentGenerator extends GeneratorClass {
+export = class ComponentGenerator extends GeneratorClass {
 
   options: {
     name: string;
@@ -31,7 +31,7 @@ class ComponentGenerator extends GeneratorClass {
 
     mkdirp.sync(folderPath);
 
-    const templateUrl = `views/${appClientBase}/${name}.view.html`;
+    const templateUrl = `./${name}.view.html`;
     const pascalCase = (str: string) => {
       const camel = _.camelCase(str);
       return camel.charAt(0).toUpperCase() + camel.slice(1);
@@ -59,7 +59,7 @@ class ComponentGenerator extends GeneratorClass {
       'view.html'
     ].forEach(filetype => {
       this.fs.copyTpl(
-        this.templatePath(`template.${filetype}.template`),
+        this.templatePath(`${filetype}.template`),
         path.join(folderPath, `${name}.${filetype}`),
         data
       );
@@ -68,5 +68,3 @@ class ComponentGenerator extends GeneratorClass {
   }
 
 }
-
-export = ComponentGenerator;

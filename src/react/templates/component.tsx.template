@@ -1,0 +1,20 @@
+import * as React from 'react';
+import { <%= camelName %>Class } from './<%= kebabName %>.styles';
+
+/**
+ * type definition for properties of component
+ */
+export interface <%= pascalName %>Props {
+  // properties passed to <%= pascalName %> component
+}
+
+
+/**
+ *
+ * base react component
+ *
+ */
+export const <%= pascalName %>: React.StatelessComponent<<%= pascalName %>Props> = props =>
+  <div className={<%= camelName %>Class}>
+    Hello from <%= pascalName %> component
+  </div>;
